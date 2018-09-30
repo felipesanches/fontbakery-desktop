@@ -32,7 +32,7 @@ An unofficial cross-platform desktop GUI for FontBakery. Made with python3 + wxP
       
  3. Install/update dependencies, from the root directory of this repo run:
 
-   ``pip install --upgrade requierments.txt``
+   ``pip install -r requierments.txt``
 
 4. Run the app from the root directory: 
    
