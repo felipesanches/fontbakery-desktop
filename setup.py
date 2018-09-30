@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
 
-
-with open("README.md", "m", encoding="utf-8") as f:
-    long_description = f.read()
+long_description = "foo bar"
 
 setup(
-    name="trufont",
+    name="fontBakery",
     use_scm_version={"write_to": "src/fontbakery-desktop/_version.py"},
     description="Foo Bar is so and so.",
     long_description=long_description,
