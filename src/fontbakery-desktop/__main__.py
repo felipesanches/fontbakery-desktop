@@ -29,9 +29,37 @@ class MyFrame(wx.Frame):
         bitmap = scale_bitmap(bitmap, 512, 512)
         sb = wx.StaticBitmap(panel1, bitmap=bitmap, pos=(0,0))
 
-        # Add the Canvas
-        panel2 = NavCanvas.NavCanvas(splitter, BackgroundColor = "DARK GREY")
+        # add the Canvas
+        panel2 = NavCanvas.NavCanvas(splitter,
+                                     ProjectionFun = None,
+                                     Debug = 0,
+                                     BackgroundColor = "LIGHT GREY",
+                                     )
         Canvas = panel2.Canvas
+
+        # put something on the Canvas
+        Point = (15,10)
+        Canvas.AddScaledTextBox("Markdown output \nwill be shown here.",
+                                      Point,
+                                      2,
+                                      Color = "DARK GREY",
+                                      BackgroundColor = None,
+                                      LineColor = "DARK GREY",
+                                      LineStyle = "Solid",
+                                      LineWidth = 1,
+                                      Width = None,
+                                      PadSize = 5,
+                                      Family = wx.SWISS,
+                                      Style = wx.NORMAL,
+                                      Weight = wx.NORMAL,
+                                      Underlined = False,
+                                      Position = 'br',
+                                      Alignment = "center",
+                                      InForeground = False)
+
+        wx.CallAfter(Canvas.ZoomToBB)
+
+ 
 
         # set up the Splitter
         sash_Position = 512
@@ -49,6 +77,7 @@ class MyApp(wx.App):
         return True
 
 
-if __name__ == '__main__':
-    app = MyApp(0)
-    app.MainLoop()
+#if __name__ == '__main__':
+app = MyApp(0)
+app.MainLoop()
+
