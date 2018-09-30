@@ -1,1 +1,2 @@
 wxPython==4.0.3
+numpy
