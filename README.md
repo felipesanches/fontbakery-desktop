@@ -29,8 +29,8 @@ An unofficial cross-platform desktop GUI for FontBakery. Made with python3 + wxP
 
    -  Run ``deactivate`` when you wish to exit the virtual environment.
       This restores the default system `PATH`.
-      
- 3. Install/update dependencies, from the root directory of this repo run:
+     
+3. Install/update dependencies, from the root directory of this repo run:
 
    ``pip install -r requierments.txt``
 
