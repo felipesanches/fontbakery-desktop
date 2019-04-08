@@ -1,4 +1,4 @@
-# FontBakery Desktop
+# FontBakery Desktop (WIP NOT WORKING)
 An unofficial desktop GUI for FontBakery. Cross-platform support for MacOS, GNU+Linux, and Windows. Made with python3 + wxPython. 
 
 ![screenshot](https://github.com/eliheuer/fontbakery-desktop/raw/master/docs/images/screenshot.png)
