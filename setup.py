@@ -1,24 +1,24 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
 
-long_description = "foo bar"
+long_description = "A graphical user interface for running FontBakery quality assurance checks for fonts."
 
 setup(
-    name="fontBakery",
+    name="FontBakery-Desktop",
     use_scm_version={"write_to": "src/fontbakery-desktop/_version.py"},
-    description="Foo Bar is so and so.",
     long_description=long_description,
-    author="Foo Bar",
-    author_email="foo@bar.com",
-    url="http://",
+    author="Felipe Sanches",
+    author_email="juca@members.fsf.org",
+    url="http://github.com/felipesanches/fontbakery-desktop",
     license="GPL 3.0",
-    package_dir={"": "src"},
-    packages=find_packages("src"),
+    package_dir={"": "."},
+    packages=find_packages("."),
     entry_points={"gui_scripts": ["fontbakery-desktop =  fontbakery-desktop.__main__:main"]},
     include_package_data=True,
     setup_requires=["setuptools_scm"],
     install_requires=[
-        "wxPython>=4.0.3",
+        "fontbakery",
+        "PyQtWebEngine"
     ],
     platforms=["Win32", "Mac OS X", "Linux"],
     classifiers=[
